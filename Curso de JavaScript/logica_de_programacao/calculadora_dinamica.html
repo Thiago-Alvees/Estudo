@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Dinâmica</title>
+</head>
+<body>
+    <script>
+        /*Calculadora dinâmica. Através do prompt vamos pedir o número incinial, um sinal de operação(+, -, * ou /) 
+        e o número final.*/
+
+        var numeroInicial = prompt("Informe o primeiro número.");
+        
+        var sinal = prompt("Informe o sinal da operação");
+        while(sinal != "+" && sinal != "-" && sinal != "*" && sinal != "/"){
+            alert("Informe um sinal válido!");
+            sinal = prompt("Informe o sinal da operação.");
+        }
+
+        var numeroFinal = prompt("Informe o segundo número.")
+        
+        //Convertendo string em número
+
+        numeroInicial = parseInt(numeroInicial);
+        numeroFinal = parseInt(numeroFinal);
+
+        var resultado = 0;
+        if(sinal == "+"){
+            resultado = numeroInicial + numeroFinal;
+        } else if(sinal == "-"){
+            resultado = numeroInicial - numeroFinal;
+        }else if(sinal == "*"){
+            resultado = numeroInicial * numeroFinal;
+        }else if(sinal == "/"){
+            resultado = numeroInicial / numeroFinal;
+        }
+
+        alert("O Resultado é: "+resultado);
+        
+    </script>
+</body>
+</html>
