@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com data</title>
+</head>
+<body>
+    <script>
+        /*
+        var date = new Date();
+        alert(date.getDate()); //mostra a data do  dia atual
+        alert(date.getDay()); //mostra o dia da semana de 1 a 7 
+        alert(date.getFullYear()); //mostra o ano atual
+        alert(date.getHours()); //Mostra a hora atual 24h*/
+
+        //calculando o número em dias entre datas.
+
+        var date = new Date("01/14/2023"); //formato americano de data.
+        var date2 = new Date("01/17/2023"); //formato americano de data.
+
+        //formula para calcular a diferença em dias.
+        var diferenca = (date2.getTime() - date.getTime()) / (1000 * 3600 * 24);
+        alert(diferenca);
+
+    </script>
+</body>
+</html>
