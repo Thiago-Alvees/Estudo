@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda animação</title>
+</head>
+<body>
+    <style>
+        .conteudo h2 span{
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .conteudo p{
+            overflow: hidden;
+            height: 10px;
+            transition: 1s;
+        }
+        .mostrar{
+            height: 200px !important; /*Usei o "!important" para forçar uma ação quebrando a hierarquia.*/
+        }
+    </style>
+
+    <div class="conteudo">
+        <h3>Título do conteúdo</h3> <span>Ver mais!</span>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Praesent leo lacus, pellentesque vel ex non, molestie 
+            blandit nunc. Suspendisse a ligula dolor. Quisque mattis 
+            imperdiet metus, vitae pellentesque erat pharetra a. 
+            Ut vel est bibendum, eleifend odio quis, accumsan velit. 
+            Proin pulvinar mattis metus vel auctor. Phasellus faucibus
+            nunc quis porta ultricies. Donec pulvinar dignissim felis
+            sed sollicitudin. Curabitur vehicula sapien at tincidunt
+            vestibulum. Praesent non efficitur quam, at posuere enim. 
+            Nulla quis eros gravida, sollicitudin elit non, dapibus 
+            mauris.
+        </p>
+    </div>
+
+    <script>
+        //fazer o efeito no span "ver mais"
+        var span = document.querySelector(".conteudo span");
+        span.addEventListener("click", function(){
+            
+            var conteudo = document.querySelector(".conteudo p");
+            //utilizando o if/else para mostrar e não mostrar o conteúdo
+            if(conteudo.classList.contains("mostrar")){
+                span.innerHTML = "Ver mais!"
+                conteudo.classList.remove("mostrar");
+            }else{
+                span.innerHTML = "Ocultar!"
+                conteudo.classList.add("mostrar");
+            }
+        });
+
+    </script>
+</body>
+</html>
