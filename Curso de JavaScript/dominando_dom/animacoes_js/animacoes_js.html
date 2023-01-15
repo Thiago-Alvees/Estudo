@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação JS</title>
+</head>
+<body>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin-left: 0;
+        }
+        .animEsquerda{
+            transition: 2s;
+            margin-left: 100px;
+        }
+    </style>
+
+    <div class="box"></div>
+
+    <script>
+        // O elemento se move da esquerda para direita em 1 segundo.
+        var box = document.querySelectorAll(".box")[0];
+        /*setTimeout(()=>{
+            box.classList.add("animEsquerda");
+        }, 1000);*/
+
+        // O elemento só irá se mover após o click.
+        box.addEventListener("click",()=>{
+            box.classList.add("animEsquerda");
+        })
+    </script>
+</body>
+</html>
