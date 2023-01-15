@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando css</title>
+</head>
+<body>
+    <div class="Teste">
+        <div class="inside-teste">Texto</div>
+        <div class="inside-teste">Texto²</div>
+    </div>
+    <script>
+        var els = document.querySelectorAll('.Teste .inside-teste');
+        els[0].style.color = 'red';
+        els[0].innerHTML = "Oi"; // Com o querySelectorAll conseguimos manipular tudo que existe dentro dele. 
+    </script>
+</body>
+</html>
