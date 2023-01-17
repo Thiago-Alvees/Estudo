@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block scopes</title>
+</head>
+<body>
+    <script>
+        /*Block scope abre e fecha chaves, colocamos o código
+        dentro das chaves e dessa forma o código só fica acessível
+        dentro das chaves, porém se utilizar o termo global var 
+        ele será acessado mesmo do lado de fora.*/ 
+
+        {
+            let nome = "Thiago";
+
+            let teste = function(){
+                console.log("Olá");
+            }
+            teste();
+        }
+
+    </script>
+</body>
+</html>
