@@ -1,5 +1,5 @@
 var items = [];
-
+/*Adicionando a ação de cadastro para o botão */
 document.querySelector('input[type=submit]')
 .addEventListener('click',()=>{
     var nomeProduto = document.querySelector('input[name=nome_produto]');
@@ -15,7 +15,7 @@ document.querySelector('input[type=submit]')
     let soma = 0;
     listaProdutos.innerHTML = "";
     items.map(function(val){
-        soma+=parseFloat(val.valor);
+        soma+=parseFloat(val.valor); //Transforma string em float
 
         listaProdutos.innerHTML+=`
         <div class="lista-produto-single">
@@ -23,6 +23,7 @@ document.querySelector('input[type=submit]')
             <h3 class="price-produto"><span>R$`+val.valor+`</span></h3>
         </div>`;
     })
+    /*Função para usar apenas duas casas decimais. */
     soma = soma.toFixed(2);
     nomeProduto.value = "";
     precoProduto.value = "";
